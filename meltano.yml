@@ -1,0 +1,32 @@
+version: 1
+default_environment: dev
+project_id: 4b6e7775-2252-4070-beb8-ba1cdd245fb3
+environments:
+- name: dev
+- name: staging
+- name: prod
+send_anonymous_usage_stats: false
+plugins:
+  extractors:
+  - name: tap-spreadsheets-anywhere
+    variant: ets
+    pip_url: git+https://github.com/ets/tap-spreadsheets-anywhere.git smart_open[s3]
+    config:
+      tables:
+      - name: customers
+        path: s3://mybucket
+        pattern: "files/customers\\.csv\\.*gz"
+        start_date: '2017-05-01T00:00:00Z'
+        key_properties: [id]
+        format: csv
+        delimiter: ','
+        quotechar: '"'
+        universal_newlines: false
+        sample_rate: 10
+        max_sampling_read: 2000
+        max_sampled_files: 3
+        selected: true
+    env:
+      AWS_ACCESS_KEY_ID: minio
+      AWS_SECRET_ACCESS_KEY: minio-secret
+      AWS_ENDPOINT_URL: http://localhost:9000
