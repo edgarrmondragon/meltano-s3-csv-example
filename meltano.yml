@@ -11,11 +11,15 @@ plugins:
   - name: tap-spreadsheets-anywhere
     variant: ets
     pip_url: git+https://github.com/ets/tap-spreadsheets-anywhere.git smart_open[s3]
+    env:
+      AWS_ACCESS_KEY_ID: minio
+      AWS_SECRET_ACCESS_KEY: minio-secret
+      AWS_ENDPOINT_URL: http://localhost:9000
     config:
       tables:
       - name: customers
         path: s3://mybucket
-        pattern: "files/customers\\.csv\\.*gz"
+        pattern: files/customers\.csv\.*gz
         start_date: '2017-05-01T00:00:00Z'
         key_properties: [id]
         format: csv
@@ -26,7 +30,7 @@ plugins:
         max_sampling_read: 2000
         max_sampled_files: 3
         selected: true
-    env:
-      AWS_ACCESS_KEY_ID: minio
-      AWS_SECRET_ACCESS_KEY: minio-secret
-      AWS_ENDPOINT_URL: http://localhost:9000
+  loaders:
+  - name: target-duckdb
+    variant: jwills
+    pip_url: target-duckdb~=0.6
