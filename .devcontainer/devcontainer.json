@@ -2,7 +2,7 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
     "ghcr.io/devcontainers-contrib/features/meltano:2": {
-      "version": "'git+https://github.com/meltano/meltano.git@main'"
+      "version": "3.1.0"
     }
   }
 }
