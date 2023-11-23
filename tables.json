@@ -1,0 +1,19 @@
+[
+  {
+    "name": "customers",
+    "path": "s3://mybucket",
+    "pattern": "files/customers\\.csv\\.*gz",
+    "start_date": "2017-05-01T00:00:00Z",
+    "key_properties": [
+      "id"
+    ],
+    "format": "csv",
+    "delimiter": ",",
+    "quotechar": "\"",
+    "universal_newlines": false,
+    "sample_rate": 10,
+    "max_sampling_read": 2000,
+    "max_sampled_files": 3,
+    "selected": true
+  }
+]
