@@ -1,0 +1,9 @@
+{
+  "features": {
+    "ghcr.io/devcontainers-contrib/features/meltano:2": {
+      "version": "2.0.17",
+      "resolved": "ghcr.io/devcontainers-contrib/features/meltano@sha256:6f2ec3e8810ff0c24e048ae46e65a540feb7155ab4c37b6c5116e8befd869147",
+      "integrity": "sha256:6f2ec3e8810ff0c24e048ae46e65a540feb7155ab4c37b6c5116e8befd869147"
+    }
+  }
+}
