@@ -4,6 +4,11 @@
       "version": "2.0.17",
       "resolved": "ghcr.io/devcontainers-contrib/features/meltano@sha256:6f2ec3e8810ff0c24e048ae46e65a540feb7155ab4c37b6c5116e8befd869147",
       "integrity": "sha256:6f2ec3e8810ff0c24e048ae46e65a540feb7155ab4c37b6c5116e8befd869147"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "1.4.2",
+      "resolved": "ghcr.io/devcontainers/features/python@sha256:bf021f1800543f08bf029c449a3f25341be782b620802befa1f8e6ee51cf6cf6",
+      "integrity": "sha256:bf021f1800543f08bf029c449a3f25341be782b620802befa1f8e6ee51cf6cf6"
     }
   }
 }
